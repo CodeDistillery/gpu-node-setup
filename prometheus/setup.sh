@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./run-node-exporter
-./run-nvidia-dcgm-exporter
+./run-nvidia-dcgm-exporter \
+&& ./run-node-exporter
