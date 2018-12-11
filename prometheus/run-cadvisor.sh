@@ -1,7 +1,11 @@
 #!/bin/bash
 
+c_name=cadvisor
+
+docker stop ${c_name} && docker rm ${c_name};
+
 docker run \
-  --name cadvisor \
+  --name ${c_name} \
   --restart unless-stopped \
   -v /:/rootfs:ro \
   -v /var/run:/var/run:rw \
