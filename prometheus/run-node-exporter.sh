@@ -1,6 +1,11 @@
 #!/bin/bash
+
+c_name=node-exporter
+
+docker stop ${c_name} && docker rm ${c_name};
+
 docker run \
-  --name node-exporter \
+  --name ${c_name} \
   --restart unless-stopped \
   --net="host" --pid="host" \
   --volumes-from nvidia-dcgm-exporter:ro \
