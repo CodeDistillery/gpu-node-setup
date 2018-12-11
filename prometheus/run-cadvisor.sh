@@ -12,4 +12,5 @@ docker run \
   -v /sys:/sys:ro \
   -v /var/lib/docker/:/var/lib/docker:ro \
   -p 8080:8080 \
+  -d \
   google/cadvisor
