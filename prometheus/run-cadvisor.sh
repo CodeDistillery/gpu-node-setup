@@ -2,7 +2,7 @@
 
 c_name=cadvisor
 
-docker stop ${c_name} && docker rm ${c_name};
+docker stop ${c_name} > /dev/null && docker rm ${c_name} > /dev/null;
 
 docker run \
   --name ${c_name} \
