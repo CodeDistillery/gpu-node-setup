@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curdir=$(dirname "$0")
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-${curdir}/run-nvidia-dcgm-exporter \
-&& ${curdir}/run-node-exporter
+source ${__dir}/run-nvidia-dcgm-exporter \
+&& source ${__dir}/run-node-exporter
