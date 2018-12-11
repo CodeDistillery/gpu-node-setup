@@ -1,4 +1,6 @@
 #!/bin/bash
 
-./run-nvidia-dcgm-exporter \
-&& ./run-node-exporter
+curdir=$(dirname "$0")
+
+${curdir}/run-nvidia-dcgm-exporter \
+&& ${curdir}/run-node-exporter
