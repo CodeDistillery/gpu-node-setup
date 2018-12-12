@@ -8,4 +8,4 @@ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
 && sudo apt-get update \
 && sudo apt-get install -y nvidia-docker2 \
 && sudo pkill -SIGHUP dockerd \
-&& docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+&& sudo docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
