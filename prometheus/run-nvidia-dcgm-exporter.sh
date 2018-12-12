@@ -2,9 +2,9 @@
 
 c_name=nvidia-dcgm-exporter
 
-docker stop ${c_name} > /dev/null && docker rm ${c_name} > /dev/null;
+sudo docker stop ${c_name} > /dev/null && sudo docker rm ${c_name} > /dev/null;
 
-docker run \
+sudo docker run \
   --name ${c_name} \
   --restart unless-stopped \
   --runtime=nvidia \
